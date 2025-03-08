@@ -1,5 +1,6 @@
 const searchInput = document.getElementById("search-input")
 const products = document.querySelectorAll(".product-item")
+const buttons = document.querySelectorAll(".filter")
 
 
 const searchHandler = (event) => {
@@ -13,4 +14,12 @@ const searchHandler = (event) => {
      }
     })
 }
+
+const ilterHandler = (event) => {
+    const filter = event.target.dataset.filter
+}
 searchInput.addEventListener("keyup", searchHandler)
+
+buttons.forEach((button) => {
+    button.addEventListener("click", filterHandler)
+})
